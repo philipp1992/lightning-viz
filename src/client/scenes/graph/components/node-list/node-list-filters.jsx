@@ -74,7 +74,7 @@ export class NodeListFilters extends React.Component {
                 type="text"
                 className={'form-control form-control-sm' + (invalid ? ' is-invalid' : '')}
                 value={query}
-                placeholder={queryMode ? "country in ('US', 'CA')" : 'graph.lndexplorer.com'}
+                placeholder={queryMode ? "country in ('US', 'CA')" : 'ln.stakenet.info'}
                 onChange={this.queryChanged}
                 onKeyDown={this.queryKeyDown}
               />
