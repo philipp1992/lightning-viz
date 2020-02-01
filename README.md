@@ -11,7 +11,7 @@ The server also periodically pings peers to determine their connectivity. The se
 lightning-viz requires LND 0.4.0-beta to be installed locally.
 
 ```
-git clone https://github.com/altangent/lightning-viz
+git clone https://github.com/cwntr/lightning-viz
 cd lightning-viz
 npm install && npm run build
 npm start
