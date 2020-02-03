@@ -21,7 +21,7 @@ export const NodeChannel = ({ channel, nodeLookup }) => {
           </g>
         </svg>
       </div>
-      <div className="channel-capacity">{channel.capacity / 1e2} µXSN</div>
+      <div className="channel-capacity">{(channel.capacity / 1e5).toFixed(2)} mXSN</div>
     </li>
   );
 };

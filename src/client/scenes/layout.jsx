@@ -10,7 +10,7 @@ export class Layout extends React.Component {
           <Route path="/" component={GraphScene} />
         </div>
         <div className="footer">
-          Fork on <a href="https://github.com/cwntr/lightning-viz">GitHub</a>
+          <strong>More about Stakenet:</strong> <a target="_blank" href="https://stakenet.info">stakenet.info</a>  | <strong>Code:</strong>  <a target="_blank" href="https://github.com/cwntr/lightning-viz">github.com/cwntr/lightning-viz</a>
         </div>
       </div>
     );

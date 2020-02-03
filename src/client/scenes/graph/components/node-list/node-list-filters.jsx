@@ -30,7 +30,7 @@ export class NodeListFilters extends React.Component {
       let valid = nodeSearch.validate(query);
       if (valid) this.props.filterNodes(query);
       else this.setState({ invalid: true });
-    } else this.props.filterNodes(`alias like '*${query}*'`);
+    } else this.props.filterNodes(`alias like '*${query}*' or pub_key like '*${query}*'`);
   };
 
   render() {
@@ -48,7 +48,7 @@ export class NodeListFilters extends React.Component {
                 onChange={this.modeChange}
                 checked={!queryMode}
               />
-              Alias
+              Alias / Pubkey
             </label>
           </div>
           <div className="custom-control custom-radio custom-control-inline">
@@ -62,7 +62,7 @@ export class NodeListFilters extends React.Component {
                 onChange={this.modeChange}
                 checked={queryMode}
               />
-              Advanced querying
+              Advanced search
             </label>
           </div>
           <div className="query-info-container">
@@ -74,7 +74,7 @@ export class NodeListFilters extends React.Component {
                 type="text"
                 className={'form-control form-control-sm' + (invalid ? ' is-invalid' : '')}
                 value={query}
-                placeholder={queryMode ? "country in ('US', 'CA')" : 'ln.stakenet.info'}
+                placeholder={queryMode ? "capacity > 100000000" : 'stakenet.info'}
                 onChange={this.queryChanged}
                 onKeyDown={this.queryKeyDown}
               />

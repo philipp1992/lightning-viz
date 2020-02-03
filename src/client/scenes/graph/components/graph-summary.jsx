@@ -11,15 +11,15 @@ export const GraphSummary = ({ graph }) => {
   return (
     <div className="graph-stats">
       <div className="graph-stat">
-        <div className="value">{nodeCount}</div>
+        <div className="value"><strong>{nodeCount}</strong></div>
         <div className="title">Nodes</div>
       </div>
       <div className="graph-stat">
-        <div className="value">{channelCount}</div>
+        <div className="value"><strong>{channelCount}</strong></div>
         <div className="title">Channels</div>
       </div>
       <div className="graph-stat">
-        <div className="value">{(capacity / 1e8).toFixed(2)} XSN </div>
+        <div className="value"><strong>{(capacity / 1e8).toFixed(2)} XSN </strong></div>
         <div className="title">Capacity</div>
       </div>
     </div>

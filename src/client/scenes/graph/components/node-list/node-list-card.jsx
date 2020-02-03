@@ -6,10 +6,9 @@ import { NodeListSummary } from './node-list-summary';
 
 export const NodeListCard = ({ fullGraph, filteredNodes, ...props }) => {
   if (!filteredNodes) return '';
-  let { testnet } = fullGraph;
   return (
     <div className="nodes-card card">
-      <h3 className="card-header">Stakenet {testnet ? 'Testnet' : 'Mainnet'}</h3>
+      <h3 className="card-header"><img src="https://stakenet.info/img/xsn.png" width="30px" height="30px"></img> XSN Lightning Network</h3>
       <div className="nodes-card-body card-body">
         <NodeListFilters nodes={filteredNodes} {...props} />
         <NodeList nodes={filteredNodes} {...props} />

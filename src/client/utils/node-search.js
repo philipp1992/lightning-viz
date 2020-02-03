@@ -188,7 +188,7 @@ function validateParseTree(parseTree) {
   } else if (parseTree.type === 'string' || parseTree.type === 'bool' || parseTree.type === 'int') {
     result = parseTree.value !== undefined;
   } else if (parseTree.type === 'property') {
-    let props = new Set(['alias', 'is_reachable', 'country', 'channels', 'capacity']);
+    let props = new Set(['alias', 'is_reachable', 'country', 'channels', 'capacity', 'pub_key']);
     result = props.has(parseTree.value);
   }
   console.log(parseTree, result);
@@ -199,6 +199,8 @@ function getNodeValue(node, prop) {
   switch (prop) {
     case 'alias':
       return node.alias;
+    case 'pub_key':
+      return node.pub_key;
     case 'is_reachable':
       return node.is_reachable;
     case 'country':
