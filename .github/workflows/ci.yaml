@@ -9,7 +9,7 @@ jobs:
         uses: aevea/action-kaniko@master
         with:
           build_file: images/Dockerfile
-          image: aevea/kaniko
+          image: muellerp92/testhub-viz
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           cache: true
