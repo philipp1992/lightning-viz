@@ -8,6 +8,7 @@ jobs:
       - name: Kaniko build
         uses: aevea/action-kaniko@master
         with:
+          path: images
           build_file: images/Dockerfile
           image: muellerp92/testhub-viz
           username: ${{ secrets.DOCKERHUB_USERNAME }}
