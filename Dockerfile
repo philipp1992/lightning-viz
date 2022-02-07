@@ -9,4 +9,4 @@ COPY src .
 
 RUN npm install 
 
-CMD [ "npm", "start" ]
+CMD [ "node", "server/server.js" ]
